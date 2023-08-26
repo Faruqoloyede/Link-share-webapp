@@ -43,27 +43,43 @@
     </nav>
 
     <div class="container">
-        <div class="hero_section my-5">
+        <!--==========PROFILE DETAILS==========-->
+        <div class="hero_section my-5 d-none">
             <h1 class="text-dark text-center">Profile Details</h1>
             <p class="text-secondary text-center">Add your details to create social media links</p>
 
             <div class="form">
-                <div class="form-group">
+                <div class="form-group my-4">
                     <label for="name">First Name</label>
                     <input type="text" name="name" class="form-control" id="first_name">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group my-4">
                     <label for="name">Last Name</label>
                     <input type="text" name="name" class="form-control" id="last_name">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group my-4">
                     <label for="email">Last Name</label>
                     <input type="email" name="email" class="form-control" id="last_name">
                 </div>
             </div>
-            <button type="button" class="btn btn-outline-success my-4">Next</button>
+            <button type="button" class="btn btn-outline-success my-4 w-100">Next</button>
+        </div>
+        <!--==========LINK DETAILS==========-->
+        <div class="link_section my-4">
+            <h1 class="text-dark text-center">Customized Your links</h1>
+            <p class="text-secondary text-center">Add links below and then share your profile with the world</p>
+            <button type="button" class="btn btn-outline-success my-4 w-100">+Add new link</button>
+            <div class="popup_details">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                  <input type="email" name="email" class="form-control my-3">
+            </div>
         </div>
     </div>
 </body>

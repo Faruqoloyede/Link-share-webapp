@@ -16,3 +16,13 @@
  i{
     font-size: 1.5rem;
 }
+
+.link_section {
+    position: relative;
+}
+
+.popup_details {
+    position: absolute;
+    top: 100;
+    left: 10%;
+}
