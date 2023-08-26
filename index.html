@@ -19,24 +19,52 @@
 </head>
 <body>
     <!--==========NAV-BAR==========-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container d-flex align-items-center justify-content-between">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
             <div class="d-flex align-items-center flex">
-                <i class="bi bi-link text-primary logo"></i>
-                <h1 class="text-dark mx-2">Link-share</h1>
+                <i class="bi bi-link text-light logo"></i>
+                <h1 class="text-light mx-2">Link-share</h1>
             </div>
-            <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-dark px-2 link" aria-current="page" href="#"><i class="bi bi-person-circle"></i>Profile details</a>
+            <button type="button" class="btn btn-outline-light mx-4  d-lg-none d-sm-block"><i class="bi bi-eye"></i></button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto nav-list">
+                    <li class="nav-item d-sm-flex align-items-center px-3 ">
+                        <i class="bi bi-person-circle text-light"></i>
+                        <a href="#" class="nav-link link text-light">Profile Details</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark link px-2" href="#"><i class="bi bi-link-45deg"></i>Link</a>
+                    <li class="nav-item d-flex align-items-center px-3">
+                        <i class="bi bi-link-45deg text-light"></i>
+                        <a href="#" class="nav-link link text-light">Link</a>
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-outline-primary">Primary</button>
         </div>
+        <button type="button" class="btn btn-outline-light mx-4 d-lg-block d-sm-none">preview</button>
     </nav>
+
+    <div class="container">
+        <div class="hero_section my-5">
+            <h1 class="text-dark text-center">Profile Details</h1>
+            <p class="text-secondary text-center">Add your details to create social media links</p>
+
+            <div class="form">
+                <div class="form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" name="name" class="form-control" id="first_name">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Last Name</label>
+                    <input type="text" name="name" class="form-control" id="last_name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Last Name</label>
+                    <input type="email" name="email" class="form-control" id="last_name">
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-success my-4">Next</button>
+        </div>
+    </div>
 </body>
 </html>
