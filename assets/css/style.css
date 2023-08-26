@@ -1,0 +1,15 @@
+.logo {
+    font-size: 3rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}

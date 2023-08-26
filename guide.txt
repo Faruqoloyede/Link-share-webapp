@@ -1,0 +1,21 @@
+link icon
+<i class="fa-solid fa-link"></i>
+
+github
+
+<i class="fa-brands fa-github"></i>
+
+youtube
+<i class="fa-brands fa-youtube"></i>
+
+facebook
+<i class="fa-brands fa-facebook"></i>
+
+linkdin
+<i class="fa-brands fa-linkedin"></i>
+
+twitter
+
+<i class="fa-brands fa-x-twitter"></i>
+
+<i class="fa-brands fa-instagram"></i>
