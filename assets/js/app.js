@@ -17,6 +17,9 @@ const re = document.querySelector(".result");
 const input = document.querySelector("#link");
 const text = document.querySelector("#text");
 const add_btn = document.querySelector("#add_btn");
+const next_btn = document.querySelector("#next");
+const profile = document.querySelector(".hero_section");
+const link = document.querySelector(".link_section");
 
 
 for(let i = 0; i < drop_down.length; i++) {
@@ -31,6 +34,11 @@ for(let i = 0; i < drop_down.length; i++) {
         drop_down[i].insertAdjacentHTML("beforeend", optionTag);
     }
 }
+
+next_btn.addEventListener("click", ()=>{
+    profile.classList.add("hide");
+    link.classList.add("show")
+})
 
 add_btn.addEventListener("click", ()=>{
     document.querySelector(".popup_box").classList.add("show");

@@ -21,10 +21,17 @@
     font-size: 1.5rem;
 }
 
-/* .link_section {
-    display: ;
-} */
+.hero_section.hide {
+    display: none;
+}
 
+.link_section {
+    display: none;
+}
+
+.link_section.show {
+    display: block;
+}
 
 img {
     height: 150px;
