@@ -24,6 +24,9 @@
 .hero_section.hide {
     display: none;
 }
+/* .hero_section{
+    display: none;
+} */
 
 .link_section {
     display: none;
@@ -54,38 +57,23 @@ img {
     display: block;
 }
 
+.result {
+    background-color: #eee;
+    border-radius: 5px;
+}
 
-
-.select_box {
+.flex {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.select_box .text_box{
-    background-color: antiquewhite;
-    height: 55px;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 400;
+.name {
+    overflow-wrap: break-word;
 }
 
-.options {
-    position: relative;
-    padding: 20px;
-    margin-top: 10px;
-    background-color: green;
-
-}
-
-.options.active {
-    display: block;
-}
-
-.option {
-    display: flex;
-    align-items: center;
-}
-
-img {
-    width: 20px;
+.messages {
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s, bottom 0.4s;
+    visibility: hidden;
 }

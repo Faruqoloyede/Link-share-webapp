@@ -13,13 +13,22 @@ let platforms = {
 const drop_down = document.querySelectorAll(".form-select");
 const add = document.querySelector("#btn");
 const form = document.querySelector(".form-select");
-const re = document.querySelector(".result");
-const input = document.querySelector("#link");
+const link_input = document.querySelector("#link");
 const text = document.querySelector("#text");
 const add_btn = document.querySelector("#add_btn");
 const next_btn = document.querySelector("#next");
 const profile = document.querySelector(".hero_section");
 const link = document.querySelector(".link_section");
+const firstName = document.querySelector("#first_name");
+const lastName = document.querySelector("#last_name");
+const email = document.querySelector("#email");
+
+let firstName_value;
+let lastName_value;
+let email_value;
+let textValue;
+let linkValue;
+let user_data;
 
 
 for(let i = 0; i < drop_down.length; i++) {
@@ -34,34 +43,58 @@ for(let i = 0; i < drop_down.length; i++) {
         drop_down[i].insertAdjacentHTML("beforeend", optionTag);
     }
 }
-
+// adding an event listener to the next btn onclick on it add the hide class to profile and add show class to the link
 next_btn.addEventListener("click", ()=>{
-    profile.classList.add("hide");
-    link.classList.add("show")
-})
+    firstName_value = firstName.value;
+    lastName_value = lastName.value;
+    email_value = email.value;
+    if(firstName_value == "" && lastName_value == "" && email_value == "") {
+        return
+    } else {
+        profile.classList.add("hide");
+        link.classList.add("show")
+    }
+});
 
+// onchange of the option list 
+form.addEventListener("change", ()=>{
+    let optionValue = form.options[form.selectedIndex].text;
+    // when any value is picked from the options show in the input field
+    link_input  .value = optionValue;
+});
+
+// adding an event listener to the add_btn onclick on it add show class to popup box
 add_btn.addEventListener("click", ()=>{
     document.querySelector(".popup_box").classList.add("show");
-})
+});
 
 // add event listener to the button
 add.addEventListener("click", ()=>{
-    let textValue = text.value;
-    let linkValue = input.value;
-    console.log(textValue, linkValue);
+    textValue = text.value;
+    linkValue = link_input.value;
+    firstName_value = firstName.value;
+    lastName_value = lastName.value;
+    email_value = email.value;
+
+    if(textValue || linkValue) {
+        user_data = {
+            name: textValue,
+            link: linkValue,
+            firstName : firstName_value,
+            lastName : lastName_value,
+            email : email_value
+        }
+        console.log(user_data);
+        document.querySelector(".popup_box").classList.remove("show");
+    };
 
 });
 
-form.addEventListener("change", ()=>{
-    let re = form.options[form.selectedIndex].text;
-    // when any value is picked from the options show in the input field
-    input.value = re;
-});
+// uploading of picture
 
+const profilepic = document.getElementById("profilepic");
+const inputfile = document.getElementById("input-file");
 
-const image = document.querySelector("img"),
-type = document.querySelector("input");
-
-type.addEventListener("change", ()=>{
-    image.src = URL.createObjectURL(type.files[0]);
-})
+inputfile.onchange = function(){
+    profilepic.src = URL.createObjectURL(inputfile.files[0]);
+};
