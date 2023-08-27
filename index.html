@@ -15,7 +15,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- <link rel="stylesheet" href="assets/css/css/bootstrap.min.css"> -->
 </head>
 <body>
     <!--==========NAV-BAR==========-->
@@ -39,16 +38,18 @@
                 </ul>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-light mx-4 d-lg-block d-sm-none">preview</button>
+        <button type="button" class="btn btn-outline-light mx-4 d-lg-block d-sm-none d-none">preview</button>
     </nav>
 
     <div class="container">
         <!--==========PROFILE DETAILS==========-->
-        <div class="hero_section my-5 d-none">
+        <div class="hero_section my-5">
             <h1 class="text-dark text-center">Profile Details</h1>
             <p class="text-secondary text-center">Add your details to create social media links</p>
 
             <div class="form">
+                <img src="img.png"/>
+                <input type="file"/>
                 <div class="form-group my-4">
                     <label for="name">First Name</label>
                     <input type="text" name="name" class="form-control" id="first_name">
@@ -60,27 +61,33 @@
                 </div>
 
                 <div class="form-group my-4">
-                    <label for="email">Last Name</label>
+                    <label for="email">Email</label>
                     <input type="email" name="email" class="form-control" id="last_name">
                 </div>
             </div>
-            <button type="button" class="btn btn-outline-success my-4 w-100">Next</button>
+            <button type="button" class="btn btn-outline-success my-4 w-100" id="next">Next</button>
         </div>
         <!--==========LINK DETAILS==========-->
-        <div class="link_section my-4">
+        <div class="link_section my-4 d-none">
             <h1 class="text-dark text-center">Customized Your links</h1>
             <p class="text-secondary text-center">Add links below and then share your profile with the world</p>
-            <button type="button" class="btn btn-outline-success my-4 w-100">+Add new link</button>
-            <div class="popup_details">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                  <input type="email" name="email" class="form-control my-3">
+            <button type="button" class="btn btn-outline-success my-4 w-100" id="add_btn">+Add new link</button>
+            <div class="popup_box p-4 h-5">
+                <div class="popup_details">
+                    <select name="platform" class="form-select" aria-label="Default select example">
+                      </select>
+                      <div class="form-group my-4">
+                            <input type="text" class="form-control" id="link" placeholder="platform chose appear here">
+                        </div>
+                      <div class="form-group my-4">
+                            <input type="text" class="form-control" id="text" placeholder="Enter link">
+                        </div>
+                        <button type="button" class="btn btn-outline-success my-4 w-100" id="btn">Add</button>
+                </div>
             </div>
         </div>
     </div>
+    <script src="assets/js/app.js"></script>
+    
 </body>
 </html>

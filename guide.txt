@@ -1,21 +1,33 @@
-link icon
-<i class="fa-solid fa-link"></i>
 
 github
-
-<i class="fa-brands fa-github"></i>
-
-youtube
-<i class="fa-brands fa-youtube"></i>
-
-facebook
-<i class="fa-brands fa-facebook"></i>
-
-linkdin
-<i class="fa-brands fa-linkedin"></i>
+&#xF3ED;
+<i class="bi bi-github"></i>
 
 twitter
+&#xF5EF;
+<i class="bi bi-twitter"></i>
 
-<i class="fa-brands fa-x-twitter"></i>
+youtube
+&#xF62B
+<i class="bi bi-youtube"></i>
 
-<i class="fa-brands fa-instagram"></i>
+instagram
+&#xF437;
+<i class="bi bi-instagram"></i>
+
+linkedin
+&#xF472;
+<i class="bi bi-linkedin"></i>
+
+facebook
+&#xF344;
+<i class="bi bi-facebook"></i>
+
+whatsapp
+&#xF618;
+<i class="bi bi-whatsapp"></i>
+
+ <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
+
+<img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>
+<img width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
