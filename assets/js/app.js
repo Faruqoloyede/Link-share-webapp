@@ -22,6 +22,7 @@ const link = document.querySelector(".link_section");
 const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
 const email = document.querySelector("#email");
+const users_info = [];
 
 let firstName_value;
 let lastName_value;
@@ -60,7 +61,7 @@ next_btn.addEventListener("click", ()=>{
 form.addEventListener("change", ()=>{
     let optionValue = form.options[form.selectedIndex].text;
     // when any value is picked from the options show in the input field
-    link_input  .value = optionValue;
+    link_input.value = optionValue;
 });
 
 // adding an event listener to the add_btn onclick on it add show class to popup box
@@ -84,17 +85,25 @@ add.addEventListener("click", ()=>{
             lastName : lastName_value,
             email : email_value
         }
-        console.log(user_data);
+
+        users_info.push(user_data);
+        localStorage.setItem("users_info", JSON.stringify(users_info))
         document.querySelector(".popup_box").classList.remove("show");
     };
 
 });
 
-// uploading of picture
+// const show_links = ()=>{
+//     users.forEach((user)=>{
+//         console.log(user);
+//     })
+// }
+// show_links();
+// uploading of picture and saving it in local storage
 
-const profilepic = document.getElementById("profilepic");
-const inputfile = document.getElementById("input-file");
+// const profilepic = document.getElementById("profilepic");
+// const inputfile = document.getElementById("input-file");
 
-inputfile.onchange = function(){
-    profilepic.src = URL.createObjectURL(inputfile.files[0]);
-};
+// inputfile.onchange = function(){
+//     profilepic.src = URL.createObjectURL(inputfile.files[0]);
+// };
